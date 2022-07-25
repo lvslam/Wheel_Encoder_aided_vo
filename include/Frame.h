@@ -189,7 +189,7 @@ public:
 
     float odomx, odomy, odomtheta;
 
-    double vl, vr;
+    double vl, vr;  // 轮速计的值
 
 private:
 

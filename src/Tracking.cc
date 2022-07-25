@@ -197,7 +197,8 @@ cv::Mat Tracking::GrabImageStereo(const cv::Mat &imRectLeft, const cv::Mat &imRe
 
     mCurrentFrame = Frame(mImGray,imGrayRight,timestamp,mpORBextractorLeft,mpORBextractorRight,mpORBVocabulary,mK,mDistCoef,mbf,mThDepth);
     mCurrentFrame.odomx = Odom[0]; mCurrentFrame.odomy = Odom[1]; mCurrentFrame.odomtheta = Odom[2];
-    mCurrentFrame.vl = wheel.first; mCurrentFrame.vr = wheel.second;
+    mCurrentFrame.vl = wheel.first;
+    mCurrentFrame.vr = wheel.second;
 //    cout << wheel.first << " " << wheel.second << endl;
 
     Track();
